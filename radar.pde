@@ -1,8 +1,8 @@
-import processing.serial.*; // imports library for serial communication
-import java.awt.event.KeyEvent; // imports library for reading the data from the serial port
+import processing.serial.*; // this imports library for serial communication
+import java.awt.event.KeyEvent; // this imports library for reading the data from the serial port
 import java.io.IOException;
-Serial myPort; // defines Object Serial
-// defubes variables
+Serial myPort; // this defines Object Serial
+// this defubes variables
 String angle="";
 String distance="";
 String data="";
@@ -14,10 +14,10 @@ int index2=0;
 PFont orcFont;
 void setup() {
   
- size (1200, 700); // ***CHANGE THIS TO YOUR SCREEN RESOLUTION***
+ size (1200, 700); // this is screen resolution and you can change it according to you
  smooth();
- myPort = new Serial(this,"COM5", 9600); // starts the serial communication
- myPort.bufferUntil('.'); // reads the data from the serial port up to the character '.'. So actually it reads this: angle,distance.
+ myPort = new Serial(this,"COM5", 9600); // this starts the serial communication
+ myPort.bufferUntil('.'); // this reads the data from the serial port up to the character '.'. So actually it reads this: angle,distance.
 }
 void draw() {
   
@@ -109,7 +109,7 @@ void drawText() { // draws the texts on the screen
   text("30cm",width-width*0.177,height-height*0.0833);
   text("40cm",width-width*0.0729,height-height*0.0833);
   textSize(40);
-  text("Tree Robo", width-width*0.875, height-height*0.0277);
+  text("Tree Robo", width-width*0.875, height-height*0.0277);// this name is displayed on interface and you can change it accordingly
   text("Angle: " + iAngle +" °", width-width*0.48, height-height*0.0277);
   text("Distance: ", width-width*0.26, height-height*0.0277);
   if(iDistance<40) {
